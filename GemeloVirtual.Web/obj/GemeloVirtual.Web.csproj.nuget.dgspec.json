@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
         "projectName": "GemeloVirtual.Web",
         "projectPath": "C:\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
-        "packagesPath": "C:\\Users\\sanch\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\diego\\.nuget\\packages\\",
         "outputPath": "C:\\GemeloVirtual\\GemeloVirtual.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\sanch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\diego\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
