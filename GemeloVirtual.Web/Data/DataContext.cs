@@ -15,10 +15,16 @@ namespace GemeloVirtual.Web.Data
         public DbSet<Reportes_Medicos> Reportes_Medicos{ get; set;}
         public DbSet<Sintomas> Sintomas{ get; set;}
         public DbSet<Unidad_Medida> unidad_Medidas { get; set;}
+        public DbSet<Doctor> Doctors { get; set;}
+        public DbSet<Hospital> Hospitals { get; set;}
 
     public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
         }
+
+    public DbSet<GemeloVirtual.Web.Data.Entities.Doctor> Doctor { get; set; }
+
+    public DbSet<GemeloVirtual.Web.Data.Entities.Paciente> Paciente { get; set; }
     }
 }

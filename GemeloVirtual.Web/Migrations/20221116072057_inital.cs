@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GemeloVirtual.Web.Migrations
 {
-    public partial class Initial : Migration
+    public partial class inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -103,6 +103,38 @@ namespace GemeloVirtual.Web.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Doctor",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Univeristy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Licence = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Doctor", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Hospitals",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Street = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Hospitals", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Medicamentos_Dosis",
                 columns: table => new
                 {
@@ -114,6 +146,28 @@ namespace GemeloVirtual.Web.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Medicamentos_Dosis", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Paciente",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Age = table.Column<int>(type: "int", nullable: false),
+                    Gender = table.Column<bool>(type: "bit", nullable: false),
+                    Street = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Number = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telephone = table.Column<int>(type: "int", nullable: false),
+                    Ilness = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Alergies = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Paciente", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -355,7 +409,16 @@ namespace GemeloVirtual.Web.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Doctor");
+
+            migrationBuilder.DropTable(
+                name: "Hospitals");
+
+            migrationBuilder.DropTable(
                 name: "Medicamentos_Dosis");
+
+            migrationBuilder.DropTable(
+                name: "Paciente");
 
             migrationBuilder.DropTable(
                 name: "Patients");
