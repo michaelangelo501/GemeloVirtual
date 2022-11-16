@@ -19,6 +19,114 @@ namespace GemeloVirtual.Web.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Admision_Hospital", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id_Hospital")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Paciente")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Admisiones_Hospital");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Antecedentes_No_Patologicos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Alimentacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Habitos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Higiene")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Mascotas")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Servicios")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Vivienda")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Antecedentes_No_Patologicos");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Antecedentes_Patologicos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Accidentes_Previos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Alcohol")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Alergias")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cirugias_Previas")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Enfermedad_Diagnosticada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Infecciones")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Tabaco")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("Transfucion_Sangre")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Uso_Medicamentos")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Antecedentes_Patologicos");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Medicamentos_Dosis", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Id_Dosis")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id_Unidad_Medida")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Medicamentos_Dosis");
+                });
+
             modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Patient", b =>
                 {
                     b.Property<int>("Id")
@@ -37,6 +145,57 @@ namespace GemeloVirtual.Web.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Patients");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Reportes_Medicos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id_Paciente")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reportes_Medicos");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Sintomas", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sintomas");
+                });
+
+            modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.Unidad_Medida", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Unidad_Medidas")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Unidades_Medida")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("unidad_Medidas");
                 });
 
             modelBuilder.Entity("GemeloVirtual.Web.Data.Entities.User", b =>

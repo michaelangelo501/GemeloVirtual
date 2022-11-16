@@ -4,8 +4,7 @@ namespace GemeloVirtual.Web.Data.Entities
 {
     public class Antecedentes_No_Patologicos
     {
-
-        public int Id_Antecedente_No_Patologico { get; set; }
+        public int Id { get; set; }
 
         public string Vivienda { get; set; }
 

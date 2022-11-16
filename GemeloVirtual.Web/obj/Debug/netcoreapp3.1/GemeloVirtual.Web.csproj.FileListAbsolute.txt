@@ -153,3 +153,5 @@ C:\GemeloVirtual\GemeloVirtual.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\nati
 C:\GemeloVirtual\GemeloVirtual.Web\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\GemeloVirtual\GemeloVirtual.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\GemeloVirtual\GemeloVirtual.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\GemeloVirtual\GemeloVirtual.Web\obj\Debug\netcoreapp3.1\staticwebassets\GemeloVirtual.Web.StaticWebAssets.xml
+C:\GemeloVirtual\GemeloVirtual.Web\obj\Debug\netcoreapp3.1\scopedcss\bundle\GemeloVirtual.Web.styles.css

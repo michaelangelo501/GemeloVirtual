@@ -3,10 +3,64 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace GemeloVirtual.Web.Migrations
 {
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Admisiones_Hospital",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    Id_Hospital = table.Column<int>(type: "int", nullable: false),
+                    Id_Paciente = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Admisiones_Hospital", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Antecedentes_No_Patologicos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Vivienda = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Servicios = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Higiene = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Alimentacion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Habitos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Mascotas = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Antecedentes_No_Patologicos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Antecedentes_Patologicos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Alergias = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cirugias_Previas = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Accidentes_Previos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Enfermedad_Diagnosticada = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Infecciones = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Uso_Medicamentos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Transfucion_Sangre = table.Column<bool>(type: "bit", nullable: false),
+                    Tabaco = table.Column<bool>(type: "bit", nullable: false),
+                    Alcohol = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Antecedentes_Patologicos", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "AspNetRoles",
                 columns: table => new
@@ -46,6 +100,61 @@ namespace GemeloVirtual.Web.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Medicamentos_Dosis",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id_Dosis = table.Column<int>(type: "int", nullable: false),
+                    Id_Unidad_Medida = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Medicamentos_Dosis", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Reportes_Medicos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Id_Paciente = table.Column<int>(type: "int", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Reportes_Medicos", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Sintomas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Descripcion = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Sintomas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "unidad_Medidas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Unidad_Medidas = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Unidades_Medida = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_unidad_Medidas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -222,6 +331,15 @@ namespace GemeloVirtual.Web.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "Admisiones_Hospital");
+
+            migrationBuilder.DropTable(
+                name: "Antecedentes_No_Patologicos");
+
+            migrationBuilder.DropTable(
+                name: "Antecedentes_Patologicos");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
 
             migrationBuilder.DropTable(
@@ -237,7 +355,19 @@ namespace GemeloVirtual.Web.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "Medicamentos_Dosis");
+
+            migrationBuilder.DropTable(
                 name: "Patients");
+
+            migrationBuilder.DropTable(
+                name: "Reportes_Medicos");
+
+            migrationBuilder.DropTable(
+                name: "Sintomas");
+
+            migrationBuilder.DropTable(
+                name: "unidad_Medidas");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

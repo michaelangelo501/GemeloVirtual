@@ -8,8 +8,15 @@ namespace GemeloVirtual.Web.Data
     public class DataContext : IdentityDbContext<User>
     {
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<Admision_Hospital> Admisiones_Hospital { get; set; }
+        public DbSet<Antecedentes_No_Patologicos> Antecedentes_No_Patologicos { get; set; }
+        public DbSet<Antecedentes_Patologicos> Antecedentes_Patologicos { get; set;}
+        public DbSet<Medicamentos_Dosis> Medicamentos_Dosis { get; set;}
+        public DbSet<Reportes_Medicos> Reportes_Medicos{ get; set;}
+        public DbSet<Sintomas> Sintomas{ get; set;}
+        public DbSet<Unidad_Medida> unidad_Medidas { get; set;}
 
-        public DataContext(DbContextOptions<DataContext> options) : base(options)
+    public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
         }
