@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "16wSxQKkuqobEdEy63EByDsZOaf74JyHCAcyFl6ZwxcBNjEygOgk4A3LJvD3JKUUvIW1/4UqZb1RH+0h+wvc4A==",
+  "dgSpecHash": "5EBAeh9juasBOZcdmJ3eVxQbGBqADOTkf9XapccbIPkIS8f7tvxANXDR++tQoUceznoaVTF+zdi3RpnSGz9BWg==",
   "success": true,
   "projectFilePath": "C:\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
   "expectedPackageFiles": [
@@ -165,11 +165,7 @@
     "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512",
-    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\Mohamed Buchahim\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
