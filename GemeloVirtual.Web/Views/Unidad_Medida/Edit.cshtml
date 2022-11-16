@@ -1,0 +1,39 @@
+﻿@model GemeloVirtual.Web.Data.Entities.Unidad_Medida
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Unidad_Medida</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Unidad_Medidas" class="control-label"></label>
+                <input asp-for="Unidad_Medidas" class="form-control" />
+                <span asp-validation-for="Unidad_Medidas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Unidades_Medida" class="control-label"></label>
+                <input asp-for="Unidades_Medida" class="form-control" />
+                <span asp-validation-for="Unidades_Medida" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

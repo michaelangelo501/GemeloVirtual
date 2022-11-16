@@ -1,0 +1,72 @@
+﻿@model GemeloVirtual.Web.Data.Entities.Antecedentes_Patologicos
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Antecedentes_Patologicos</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alergias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alergias)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Cirugias_Previas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Cirugias_Previas)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Accidentes_Previos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Accidentes_Previos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Enfermedad_Diagnosticada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Enfermedad_Diagnosticada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Infecciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Infecciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Uso_Medicamentos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Uso_Medicamentos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Transfucion_Sangre)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Transfucion_Sangre)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tabaco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tabaco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alcohol)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alcohol)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

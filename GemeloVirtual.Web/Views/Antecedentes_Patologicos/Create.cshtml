@@ -1,0 +1,73 @@
+﻿@model GemeloVirtual.Web.Data.Entities.Antecedentes_Patologicos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Antecedentes_Patologicos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Alergias" class="control-label"></label>
+                <input asp-for="Alergias" class="form-control" />
+                <span asp-validation-for="Alergias" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cirugias_Previas" class="control-label"></label>
+                <input asp-for="Cirugias_Previas" class="form-control" />
+                <span asp-validation-for="Cirugias_Previas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accidentes_Previos" class="control-label"></label>
+                <input asp-for="Accidentes_Previos" class="form-control" />
+                <span asp-validation-for="Accidentes_Previos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enfermedad_Diagnosticada" class="control-label"></label>
+                <input asp-for="Enfermedad_Diagnosticada" class="form-control" />
+                <span asp-validation-for="Enfermedad_Diagnosticada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Infecciones" class="control-label"></label>
+                <input asp-for="Infecciones" class="form-control" />
+                <span asp-validation-for="Infecciones" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uso_Medicamentos" class="control-label"></label>
+                <input asp-for="Uso_Medicamentos" class="form-control" />
+                <span asp-validation-for="Uso_Medicamentos" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Transfucion_Sangre" /> @Html.DisplayNameFor(model => model.Transfucion_Sangre)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Tabaco" /> @Html.DisplayNameFor(model => model.Tabaco)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Alcohol" /> @Html.DisplayNameFor(model => model.Alcohol)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<GemeloVirtual.Web.Data.Entities.Antecedentes_Patologicos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Alergias)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cirugias_Previas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accidentes_Previos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enfermedad_Diagnosticada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Infecciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uso_Medicamentos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Transfucion_Sangre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tabaco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alcohol)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alergias)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cirugias_Previas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accidentes_Previos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enfermedad_Diagnosticada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Infecciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uso_Medicamentos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Transfucion_Sangre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tabaco)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alcohol)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
