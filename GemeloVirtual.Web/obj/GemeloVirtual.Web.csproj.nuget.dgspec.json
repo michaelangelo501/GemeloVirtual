@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sanch\\Source\\Repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj": {}
+    "C:\\Users\\sanch\\source\\repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sanch\\Source\\Repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj": {
+    "C:\\Users\\sanch\\source\\repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanch\\Source\\Repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
+        "projectUniqueName": "C:\\Users\\sanch\\source\\repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
         "projectName": "GemeloVirtual.Web",
-        "projectPath": "C:\\Users\\sanch\\Source\\Repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
+        "projectPath": "C:\\Users\\sanch\\source\\repos\\GemeloVirtual\\GemeloVirtual.Web\\GemeloVirtual.Web.csproj",
         "packagesPath": "C:\\Users\\sanch\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanch\\Source\\Repos\\GemeloVirtual\\GemeloVirtual.Web\\obj\\",
+        "outputPath": "C:\\Users\\sanch\\source\\repos\\GemeloVirtual\\GemeloVirtual.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
